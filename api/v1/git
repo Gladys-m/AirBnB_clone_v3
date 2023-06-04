@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+if [ "$#" -lt 2 ]; then
+    echo "Arguments required. Expected 2 arguments or more."
+fi
+
+commits="${@:2:4}"
+git add "$1"
+git commit -m "$commits"
+git push
